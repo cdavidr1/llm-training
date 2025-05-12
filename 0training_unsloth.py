@@ -1,3 +1,20 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.17.1
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %%
 from unsloth import FastLanguageModel
 import torch
 
@@ -27,6 +44,7 @@ model = FastLanguageModel.get_peft_model(
 )
 
 # /----------- LOADING DATA -------------/*
+# %%
 
 import json
 from datasets import Dataset
@@ -56,6 +74,9 @@ dataset = to_sharegpt(
 )
 print("READY TO USE DATA")
 # /----------- LOADING DATA -------------/*
+
+
+# %%
 
 from unsloth import standardize_sharegpt
 dataset = standardize_sharegpt(dataset)
@@ -114,6 +135,8 @@ trainer = SFTTrainer(
 
 trainer_stats = trainer.train()
 model.save_pretrained("./llama_test")
+
+# %%
 
 FastLanguageModel.for_inference(model) # Enable native 2x faster inference
 messages = [                    # Change below!

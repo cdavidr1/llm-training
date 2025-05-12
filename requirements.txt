@@ -60,9 +60,9 @@ safetensors==0.5.3
 sentencepiece==0.2.0
 shtab==1.7.2
 six==1.17.0
-sympy==1.13.1
+sympy==1.14.0
 tokenizers==0.21.1
-torch==2.6.0
+torch==2.7.0
 torchvision==0.21.0
 tqdm==4.67.1
 transformers==4.51.3
@@ -72,10 +72,10 @@ typeguard==4.4.2
 typing_extensions==4.13.1
 tyro==0.9.19
 tzdata==2025.2
-unsloth==2025.3.19
-unsloth_zoo==2025.3.17
+unsloth==2025.4.7
+unsloth_zoo==2025.4.4
 urllib3==2.3.0
-xformers==0.0.29.post3
+xformers==0.0.30
 xxhash==3.5.0
 yarl==1.18.3
 zipp==3.21.0
